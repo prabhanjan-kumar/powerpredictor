@@ -1,0 +1,42 @@
+#body_style
+{
+    background-repeat:no-repeat;
+    background-size:cover;
+    image-resolution: 1080dpi;
+    height:100%;
+    width:100%;
+}
+.pre
+{
+    width:300px;
+    height:25px;
+    background-color:#fffbfc;
+    border-style: ridge;
+    border-color:gray;
+    border-radius:6px;
+}
+#sub
+{
+    width:200px;
+    height:25px;
+    background-color:#9f6cff;
+    border-style: ridge;
+    border-color:gray;
+    border-radius:6px;
+}
+#t_id
+{
+    padding-left:40px;
+    padding-top:100px;
+}
+#h_id
+{
+    font-size:20pt;
+    font-family:cursive;
+    color:#fc5203
+}
+#f_id
+{
+    padding-left:120px;
+    padding-right:100px;
+}

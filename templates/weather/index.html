@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Power Prediction</title>
+
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+
+</head>
+<body id="body_style"style="background-image:url('{%static 'images/img5.jpg'%}');">
+    <table id="t_id">
+
+         <tr>
+             <td colspan="10" style="background-color:#f7f7f7">
+             <h1 id="h_id">
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 POWER PREDICTOR</h1><br/>
+            <form  method="post" action="/" >
+                {% csrf_token %}
+                <center>
+                <p style="font-size:15pt;color:red;"> {{msg1}} </p>
+                </center>
+                <div id="f_id">
+                {{form.as_p}}
+                </div>
+                <br/>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                <input type="submit" value="Predict the Power" id="sub">
+                <br/><br/><br/>
+            </form>
+             </td>
+             <td>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             </td>
+             <td colspan="400" >
+                {% autoescape off %}
+                {{speed|safe}}
+                {% endautoescape %}
+            </td>
+         </tr>
+    </table>
+    <center id="msg_1" style="color:red;font-size:20pt;font-family:cursive;"><p> {{msgg1}} <span style="color:cyan;font-size:20pt;font-family:cursive;"> {{hour}}</span> {{msgg2}}<span style="color:blue;font-size:20pt;font-family:cursive;"> {{max_power}}</span> </p></center>
+
+</body>
+</html>
